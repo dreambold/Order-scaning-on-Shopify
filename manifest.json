@@ -1,0 +1,19 @@
+{
+	"name": "Order Scaning",
+	"version": "1.0",
+	"manifest_version": 2,
+	"icons": { "128": "icon/icon.png" },
+	"permissions": ["<all_urls>"],
+	"content_scripts": [{
+		"js": ["js/jquery.js","js/waitForKeyElements.js", "js/script.js"],
+		"matches": ["<all_urls>"],
+		"run_at": "document_idle",
+		"all_frames": true
+	}],
+	"browser_action": {
+		"default_icon": "icon/icon.png"
+	},
+	"background": {
+		"scripts": ["js/jquery.js", "js/bg.js"]
+	}
+}
